@@ -1,0 +1,559 @@
+/* Configurações iniciais de desenvolvimento */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Alguns elementos que necessitam do display: none; para sofrer alguma alteração na resonsividade */
+.hd__btn-menu,
+.hd__nav___list____item:first-child,
+.hd__nav___list____services,
+.hd__nav___list____differentials,
+.hd__nav___list____item_____arrow {
+    display: none;
+}
+
+/* Fundo da primeira parte visível para o usuário */
+.bg-1 {
+    background: url('../images/web/s1\ ft1.png') no-repeat center;
+    background-size: cover;
+    height: auto;
+    overflow: hidden;
+}
+
+/* Header - Cabeçalho da página */
+.hd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+    transition: 800ms;
+}
+
+.hd__logo {
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-drag: none;
+    transition: .2s;
+    width: 160px;
+    order: 2;
+}
+
+.hd__btn-menu {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    z-index: 2;
+    left: 32px;
+    order: 1;
+}
+
+.hd__btn-menu___burger {
+    width: 64px;
+    height: 8px;
+    background: #fff;
+    border-radius: 6px;
+    transition: all .5s ease-in-out;
+}
+
+.hd__btn-menu___burger::before,
+.hd__btn-menu___burger::after {
+    content: '';
+    position: absolute;
+    width: 64px;
+    height: 8px;
+    background: #fff;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.hd__btn-menu___burger::before {
+    transform: translateY(-16px)
+}
+
+.hd__btn-menu___burger::after {
+    transform: translateY(16px)
+}
+
+.hd__btn-menu.open .hd__btn-menu___burger {
+    background: transparent;
+    transform: translate(-57px);
+}
+
+.hd__btn-menu.open .hd__btn-menu___burger::before {
+    transform: rotate(45deg) translate(32px, -32px);
+}
+
+.hd__btn-menu.open .hd__btn-menu___burger::after {
+    transform: rotate(-45deg) translate(32px, 32px);
+}
+
+.hd__nav {
+    display: grid;
+    position: absolute;
+    left: -500px;
+    top: 0;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    order: 1;
+    transition: .5s;
+    padding: 110px 40px 32px;
+    z-index: 1;
+
+}
+
+.hd__nav___list {
+    display: grid;
+    font-size: 1.875rem;
+    font-weight: 500;
+    text-align: center;
+    border: none;
+    padding: 0;
+    gap: 0;
+}
+
+.hd__nav___list____item {
+    border-bottom: 3px solid rgb(211, 211, 211, 0.2);
+    font-size: 1.9rem;
+    font-weight: 400;
+    line-height: normal;
+    padding: 30px;
+}
+
+.hd__nav___list____item a {
+    text-decoration: none;
+    color: #fff;
+    transition: .2s;
+} 
+
+.hd__nav___list____item a:hover {
+    color: cadetblue;
+}
+
+.hd__nav___list____item:first-child,
+.hd__nav___list____services,
+.hd__nav___list____differentials {
+    display: block;
+}
+
+.hd__nav___list____services,
+.hd__nav___list____differentials {
+    border-bottom: 1px solid rgb(211, 211, 211);
+    padding: 32px 0;
+    display: none;
+    color: #fff;
+}
+
+.hd__nav___list____services_____item,
+.hd__nav___list____differentials_____item {
+    font-size: 1.2rem;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.hd__nav___list____item_____arrow {
+    color: #fff;
+    display: inline;
+}
+
+.hd__nav___list____item:last-child {
+    border: none;
+}
+/* Fim dos styles relacionados ao Header e elementos filho */
+
+/* HomePage - Página inicial */
+.hp__container {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 256px;
+}
+
+.hp__container___title {
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 3.5rem;
+}
+
+.hp__container___description {
+    font-size: 1.1rem;
+    margin: 192px 32px 0 32px;
+    text-align: center;
+    line-height: 1.5rem;
+    font-weight: 500;
+}
+
+.hp__container___description span {
+    color: yellow;
+    font-weight: 700;
+}
+
+.hp__container___contact {
+    padding: 20px;
+    font-size: 1rem;
+    background: #1cd4e9;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 50px;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: none;
+    margin: 256px 0 40px;
+}
+/* Fim dos Styles relacionados ao Homepage e elementos filho */
+
+/* Fundo da segunda parte visível para o usuário */
+.bg-2 {
+    background: #fff;
+}
+
+/* Seção sobre a Rocky */
+.container__about {
+    display: flex;
+    flex-direction: column;
+    gap: 94px;
+    padding: 64px 0;
+    margin: 0 32px;
+}
+
+.container__about___title,
+.container__services___title,
+.container__differentials___title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.container__about___textbox {
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    padding: 32px;
+    display: grid;
+    grid-gap: 32px;
+    border-radius: 3px;
+}
+
+.container__about___textbox____paragraph {
+    font-size: 0.9rem;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.container__about___textbox____paragraph:nth-child(2n+2) {
+    font-weight: 700;
+}
+
+/* Serviços da Rocky */
+.container__services {
+    display: flex;
+    flex-direction: column;
+    padding: 64px 0;
+    margin: 0 32px;
+    gap: 94px;
+}
+
+.container__services___list {
+    display: flex;
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 48px;
+}
+
+.container__services___list____item {
+    width: 100%;
+    height: 500px;
+    display: inline-block;
+}
+
+.container__services___list____item-box_____text {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #fff;
+    gap: 32px;
+    padding: 0 32px;
+    margin-top: 92px;
+}
+
+.container__services___list____item-box {
+    border-radius: 50px;
+}
+
+.services-img-1 {
+    background: url('../images/mobile/s3\ ft1.png') no-repeat center;
+}
+
+.services-img-2 {
+    background: url('../images/mobile/s3\ ft2.png') no-repeat center;
+}
+
+.services-img-3 {
+    background: url('../images/mobile/s3\ ft3.png') no-repeat center;
+}
+
+.services-img-1, .services-img-2, .services-img-3 {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    padding: 32px 4px;
+    overflow-wrap: break-word;
+}
+
+.title-services, .title-midia-digital-performance, .title-tec-implementations {
+    color: yellow;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.text-paragraph {
+    font-size: 1.2rem;
+}
+
+.text-paragraph:nth-child(2n+1){
+    margin-top: 0;
+}
+
+.container__differentials {
+    display: flex;
+    flex-direction: column;
+    padding: 64px 32px;
+    gap: 94px;
+    border-bottom: 50px solid yellow;
+}
+
+.container__differentials___list {
+    display: flex;
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 48px;
+    margin-bottom: 100px;
+}
+
+.container__differentials___list____item {
+    width: 100%;
+    height: 400px;
+    display: inline-block;
+}
+
+.container__differentials___list____item-box_____text {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #fff;
+}
+
+.container__differentials___list____item-box {
+    border-radius: 50px;
+}
+
+.medal {
+    width: 128px;
+}
+
+.differentials-img-1 {
+    background: url('../images/mobile/s4\ ft1.png') no-repeat center;
+}
+
+.differentials-img-2 {
+    background: url('../images/mobile/s4\ ft2.png') no-repeat center;
+}
+
+.differentials-img-3 {
+    background: url('../images/mobile/s4\ ft3.png') no-repeat center;
+}
+
+.differentials-img-1, .differentials-img-2, .differentials-img-3 {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    overflow-wrap: break-word;
+    padding: 32px;
+    object-fit: cover;
+}
+
+.dif-text-paragraph {
+    margin-top: 32px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.ft {
+    display: grid;
+    background: #191919;
+    border-top: 50px solid yellow;
+    border-bottom: 50px solid yellow;
+    padding: 64px 0 0;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+}
+
+.ft__container {
+    width: 100%;
+    padding: 0 110px;
+}
+
+.ft__container___grid {
+    display: grid;
+    align-items: center;
+    grid-template-areas: 
+        'logo logo social';
+}
+
+.logo-rocky {
+    width: 160px;
+    grid-area: logo;
+}
+
+.facebook, .linkedin {
+    width: 32px;
+}
+
+.ft__container___grid____social {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ft__informations {
+    display: grid;
+    grid-template-areas: 
+        'email pipe telefone'
+        'local local local';
+    align-items: center;
+    margin-top: 32px;
+    gap: 32px;
+}
+
+.ft__informations___email {
+    grid-area: email;
+}
+
+.ft__informations___pipe {
+    grid-area: pipe;
+    justify-self: center;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.ft__informations___telefone {
+    grid-area: telefone;
+    justify-self: center;
+}
+
+.ft__informations___endereco {
+    grid-area: local;
+}
+
+.ft__informations___telefone {
+    display: flex;
+}
+
+.ft__informations___email,
+.ft__informations___telefone,
+.ft__informations___endereco {
+    display: flex;
+    align-items: center;
+}
+
+.email-tel, .endereco {
+    margin-left: 8px;
+}
+
+.email-tel {
+    font-size: .8rem;
+}
+
+.endereco {
+    font-size: .6rem;
+}
+
+.email-icon, .telefone-icon {
+    width: 24px;
+}
+
+.local-icon {
+    width: 16px;
+}
+
+.ft__container___description {
+    display: grid;
+    gap: 16px;
+    margin-top: 64px;
+}
+
+.ft__container___description____text {
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.ft__container___description____text:nth-child(2) {
+    color: yellow;
+}
+
+.ft__container___description____text:nth-child(3) {
+    color: cyan;
+}
+
+.ft__forms {
+    width: 100%;
+    display: grid;
+    background: #818181;
+    gap: 32px;
+    padding: 32px 94px;
+    margin-top: 24px;
+}
+
+
+.ft__forms input, .ft__forms textarea {
+    padding: 20px;
+    margin: 0 24px;
+    outline: none;
+    font-size: 1.2rem;
+}
+
+.ft__forms input::placeholder, .ft__forms textarea::placeholder {
+    font-size: 1.3rem;
+    color: #ccc;
+}
+
+.ft__forms textarea {
+    resize: none;
+    height: 150px;
+}
+
+.ft__forms___submit {
+    background: cyan;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+}
